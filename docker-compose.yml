@@ -1,0 +1,10 @@
+app:
+  image: fauria/lamp:latest
+  ports:
+    - "8080:80"
+    - "33060:3306"
+  volumes:
+    - "./:/var/www/html/bogex-web/"
+  environment:
+   - LOG_STDOUT=access_log
+   - LOG_STDERR=error_log
