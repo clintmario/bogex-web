@@ -1,5 +1,5 @@
 app:
-  image: fauria/lamp:latest
+  image: clintmario/ubuntu-lamp:v2
   ports:
     - "8080:80"
     - "33060:3306"

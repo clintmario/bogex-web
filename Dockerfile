@@ -8,7 +8,7 @@ Version="1.0"
 RUN apt-get update
 RUN apt-get upgrade -y
 
-COPY debconf.selections /tmp/
+COPY docker/debconf.selections /tmp/
 RUN debconf-set-selections /tmp/debconf.selections
 
 RUN apt-get install -y \
@@ -18,7 +18,7 @@ php7.0-cgi \
 php7.0-cli \
 php7.0-common \
 php7.0-curl \
-php7.0-dbg \
+#php7.0-dbg \
 php7.0-dev \
 php7.0-enchant \
 php7.0-fpm \
@@ -57,8 +57,9 @@ ENV ALLOW_OVERRIDE All
 ENV DATE_TIMEZONE UTC
 ENV TERM dumb
 
-COPY info.php /var/www/html/
-COPY run-lamp.sh /usr/sbin/
+COPY docker/info.php /var/www/html/
+COPY docker/run-lamp.sh /usr/sbin/
+COPY ./ /var/www/html/bogex-web/
 
 RUN a2enmod rewrite
 RUN ln -s /usr/bin/nodejs /usr/bin/node
@@ -76,5 +77,10 @@ EXPOSE 3306
 # Enable remote access (default is localhost only, we change this
 # otherwise our database would not be reachable from outside the container)
 RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mariadb.conf.d/50-server.cnf
+
+COPY docker/vhosts/bogex-web.localhost.com.conf /etc/apache2/sites-available
+RUN ln -s /etc/apache2/sites-available/bogex-web.localhost.com.conf /etc/apache2/sites-enabled
+
+RUN cat /var/www/html/bogex-web/docker/hosts/bogex-web.localhost.com >> /etc/hosts
 
 CMD ["/usr/sbin/run-lamp.sh"]
