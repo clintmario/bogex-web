@@ -1,5 +1,5 @@
 app:
-  image: clintmario/ubuntu-lamp:v2
+  build: .
   ports:
     - "8080:80"
     - "33060:3306"
