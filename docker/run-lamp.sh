@@ -34,8 +34,7 @@ cat << EOB
     
     **********************************************
     *                                            *
-    *    Docker image: fauria/lamp               *
-    *    https://github.com/fauria/docker-lamp   *
+    *  Docker image: clintmario/ubuntu-lamp:bw1  *
     *                                            *
     **********************************************
 
@@ -67,3 +66,5 @@ if [ $LOG_LEVEL == 'debug' ]; then
 else
     &>/dev/null /usr/sbin/apachectl -DFOREGROUND -k start
 fi
+
+/bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-post.sh

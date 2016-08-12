@@ -56,10 +56,12 @@ ENV LOG_LEVEL warn
 ENV ALLOW_OVERRIDE All
 ENV DATE_TIMEZONE UTC
 ENV TERM dumb
+ENV BGX_SERVER_NAME dev.bogex.com
+ENV BGX_APP_NAME bogex-web
 
 COPY docker/info.php /var/www/html/
 COPY docker/run-lamp.sh /usr/sbin/
-COPY ./ /var/www/html/bogex-web/
+COPY ./ /var/www/html/$BGX_APP_NAME/
 
 RUN a2enmod rewrite
 RUN ln -s /usr/bin/nodejs /usr/bin/node
@@ -74,6 +76,6 @@ VOLUME /var/log/mysql
 EXPOSE 80
 EXPOSE 3306
 
-RUN /bin/bash /var/www/html/bogex-web/docker/docker-pre.sh
+RUN /bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-pre.sh
 
 CMD ["/usr/sbin/run-lamp.sh"]
