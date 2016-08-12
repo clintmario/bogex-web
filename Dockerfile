@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Clint Mario Cleetus <clintmario@gmail.com>
 LABEL Description="Cutting-edge LAMP stack, based on Ubuntu 16.04 LTS. Includes .htaccess support and popular PHP7 features, including composer and mail() function." \
 License="Apache License 2.0" \
-Usage="docker run -d -p [HOST WWW PORT NUMBER]:80 -p [HOST DB PORT NUMBER]:3306 -v [HOST WWW DOCUMENT ROOT]:/var/www/html -v [HOST DB DOCUMENT ROOT]:/var/lib/mysql fauria/lamp" \
+Usage="docker run -d -p [HOST WWW PORT NUMBER]:80 -p [HOST DB PORT NUMBER]:3306 -v [HOST WWW DOCUMENT ROOT]:/var/www/html -v [HOST DB DOCUMENT ROOT]:/var/lib/mysql clintmario/ubuntu-lamp" \
 Version="1.0"
 
 RUN apt-get update
@@ -74,13 +74,6 @@ VOLUME /var/log/mysql
 EXPOSE 80
 EXPOSE 3306
 
-# Enable remote access (default is localhost only, we change this
-# otherwise our database would not be reachable from outside the container)
-RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mariadb.conf.d/50-server.cnf
-
-COPY docker/vhosts/bogex-web.localhost.com.conf /etc/apache2/sites-available
-RUN ln -s /etc/apache2/sites-available/bogex-web.localhost.com.conf /etc/apache2/sites-enabled
-
-RUN cat /var/www/html/bogex-web/docker/hosts/bogex-web.localhost.com >> /etc/hosts
+RUN /bin/bash /var/www/html/bogex-web/docker/docker-pre.sh
 
 CMD ["/usr/sbin/run-lamp.sh"]
