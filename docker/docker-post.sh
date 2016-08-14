@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Note line ending.
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$DIR/../.env"
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Note line ending.
+
 function exportBoolean {
     if [ "${!1}" = "**Boolean**" ]; then
             export ${1}=''
