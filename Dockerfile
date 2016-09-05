@@ -29,6 +29,7 @@ php7.0-interbase \
 php7.0-intl \
 php7.0-json \
 php7.0-ldap \
+php7.0-mbstring \
 php7.0-mcrypt \
 php7.0-mysql \
 php7.0-odbc \
@@ -49,6 +50,9 @@ RUN apt-get install mariadb-common mariadb-server mariadb-client -y
 RUN apt-get install postfix -y
 RUN apt-get install git nodejs npm composer nano tree vim curl ftp -y
 RUN npm install -g bower grunt-cli gulp
+# Added by CMC
+RUN apt-get install snmp -y
+RUN apt-get install ssh -y
 
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
@@ -75,6 +79,7 @@ VOLUME /var/log/mysql
 
 EXPOSE 80
 EXPOSE 3306
+EXPOSE 22
 
 RUN /bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-pre.sh
 

@@ -1,8 +1,9 @@
 app:
-  image: clintmario/ubuntu-lamp:bw1
+  image: clintmario/ubuntu-lamp:bw2
   ports:
     - "8080:80"
     - "33060:3306"
+    - "2200:22"
   volumes:
     - "./:/var/www/html/bogex-web/"
   environment:

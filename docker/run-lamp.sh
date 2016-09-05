@@ -62,11 +62,15 @@ fi
 # Run MariaDB
 /usr/bin/mysqld_safe --timezone=${DATE_TIMEZONE}&
 
+# Start SSH Daemon
+service ssh start
+
+# Bogex post commands.
+/bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-post.sh
+
 # Run Apache:
 if [ $LOG_LEVEL == 'debug' ]; then
     /usr/sbin/apachectl -DFOREGROUND -k start -e debug
 else
-    &>/dev/null /usr/sbin/apachectl -DFOREGROUND -k start
+    /usr/sbin/apachectl -DFOREGROUND -k start
 fi
-
-/bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-post.sh
