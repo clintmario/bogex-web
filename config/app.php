@@ -178,6 +178,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Added by CMC
+        App\Modules\ModulesServiceProvider::class,
+
     ],
 
     /*
