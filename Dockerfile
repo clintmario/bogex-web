@@ -53,6 +53,7 @@ RUN npm install -g bower grunt-cli gulp
 # Added by CMC
 RUN apt-get install snmp -y
 RUN apt-get install ssh -y
+RUN apt-get install zip unzip -y
 
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
