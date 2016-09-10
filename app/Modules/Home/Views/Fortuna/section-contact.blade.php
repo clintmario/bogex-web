@@ -1,3 +1,5 @@
+<div id="contact" class="vc_row wpb_row vc_row-fluid" style="padding-top: 20px; margin-top: 20px; margin-bottom: 20px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="boc_spacing " style="height: 0px"></div></div></div></div>
+</div>
 <div class="vc_row wpb_row vc_row-fluid vc_custom_1427986969472"><div class="dark_links wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1472575963813"><div class="wpb_wrapper"><h2 class="boc_heading no_text_transform letter_spacing_negative al_left  "  style="margin-bottom: 20px;margin-top: 0px;color: #333333;font-size: 30px;"><span>Contact <strong>Us</strong></span></h2><div class="boc_divider_holder"><div class="boc_divider  "  style="margin-top: 20px;margin-bottom: 20px;width: 100px;height: 2px;background: #eeeeee;"></div></div>
                 <div class="wpb_text_column wpb_content_element ">
                     <div class="wpb_wrapper">
@@ -15,15 +17,15 @@
                             <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10-p23797-o1" />
                             <input type="hidden" name="_wpnonce" value="9aea46c964" />
                         </div>
-                        <p><label> Your Name (required)<br />
+                        <p><label> Your Name <span style="color:#ff8e17">*</span><br />
                                 <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </label></p>
-                        <p><label> Your Email (required)<br />
+                        <p><label> Your Email <span style="color:#ff8e17">*</span><br />
                                 <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </label></p>
                         <p><label> Subject<br />
                                 <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </label></p>
                         <p><label> Your Message<br />
                                 <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
-                        <p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
+                        <p><a href="{{ Config::get('app.url') }}#contact" class="button  btn_large btn_royalblue btn_rounded icon_pos_before" target="_self"><i class="icon  icon-paperplane2"></i><span>&nbsp;&nbsp;Send</span></a></p>
                         <div class="wpcf7-response-output wpcf7-display-none"></div></form></div><div class="boc_spacing " style="height: 20px"></div></div></div></div><script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyBizgNcPAW_ssdOFlneiSW3nMZX33wqLBU'></script>
     <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="boc_spacing " style="height: 20px"></div><div id="map_9697" style="height:300px;" class="boc_google_map"></div>
                 <script type="text/javascript">
@@ -104,10 +106,10 @@
                             }
                         });
 
-                        var marker = new google.maps.Marker({
+                        /*var marker = new google.maps.Marker({
                             map: map_6307,
 
                             position: map_6307.getCenter()
-                        });
+                        });*/
                     });</script><div class="boc_spacing " style="height: 10px"></div></div></div></div>
 </div>

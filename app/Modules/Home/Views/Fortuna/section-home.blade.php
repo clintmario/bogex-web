@@ -9,9 +9,9 @@
                                 <!-- START REVOLUTION SLIDER 5.2.5.4 fullscreen mode -->
                                 <div id="rev_slider_8_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.2.5.4">
                                     <ul>	<!-- SLIDE  -->
-                                        <li data-index="rs-27" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="http://dev.bogex.com:8080/fortuna/images/blue-map.png"  data-rotate="0"  data-saveperformance="off"  data-title="Rich Backend" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                        <li data-index="rs-27" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ Config::get('app.url') }}/fortuna/images/blue-map.png"  data-rotate="0"  data-saveperformance="off"  data-title="Rich Backend" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                             <!-- MAIN IMAGE -->
-                                            <img src="http://dev.bogex.com:8080/fortuna/images/blue-map.png"  alt="World Map" title="World Map"  width="1822" height="690" data-bgposition="center top" data-kenburns="on" data-duration="5000" data-ease="Power0.easeInOut" data-scalestart="100" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="100 100" data-bgparallax="1" class="rev-slidebg" data-no-retina>
+                                            <img src="{{ Config::get('app.url') }}/fortuna/images/blue-map.png"  alt="World Map" title="World Map"  width="1822" height="690" data-bgposition="center top" data-kenburns="on" data-duration="5000" data-ease="Power0.easeInOut" data-scalestart="100" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="100 100" data-bgparallax="1" class="rev-slidebg" data-no-retina>
                                             <!-- LAYERS -->
 
                                             <!-- LAYER NR. 1 -->
@@ -74,7 +74,7 @@
                                                  data-responsive_offset="on"
 
 
-                                                 style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);"><a href="" class="button  btn_large btn_royalblue btn_rounded icon_pos_before" target="_self"><i class="icon  icon-paperplane"></i><span>&nbsp;&nbsp;Learn More</span></a> </div>
+                                                 style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);"><a href="{{ Config::get('app.url') }}#services" class="button  btn_large btn_royalblue btn_rounded icon_pos_before" target="_self"><i class="icon  icon-paperplane"></i><span>&nbsp;&nbsp;Learn More</span></a> </div>
 
                                             <!-- LAYER NR. 4 -->
                                             <div class="tp-caption black   tp-resizeme"
@@ -94,7 +94,7 @@
                                                  data-responsive_offset="on"
 
 
-                                                 style="z-index: 8; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400;font-family:Arial;"><a href="" class="button  btn_large btn_white btn_outline btn_rounded" target="_self"><i class="icon  icon-mail"></i><span>&nbsp;&nbsp;Contact Us</span></a> </div>
+                                                 style="z-index: 8; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400;font-family:Arial;"><a href="{{ Config::get('app.url') }}#contact" class="button  btn_large btn_white btn_outline btn_rounded" target="_self"><i class="icon  icon-mail"></i><span>&nbsp;&nbsp;Contact Us</span></a> </div>
 
                                             <!-- LAYER NR. 5 -->
                                             <div class="tp-caption Fortuna_Huge_Title   tp-resizeme"
@@ -180,7 +180,7 @@
                                         }else{
                                             revapi8 = tpj("#rev_slider_8_1").show().revolution({
                                                 sliderType:"hero",
-                                                jsFileLocation:"//dev.bogex.com:8080/fortuna/js/plugins/",
+                                                jsFileLocation:"//{{ Config::get('module.app_segment') }}/fortuna/js/plugins/",
                                                 sliderLayout:"fullscreen",
                                                 dottedOverlay:"none",
                                                 delay:9000,

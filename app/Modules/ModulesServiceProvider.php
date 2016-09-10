@@ -14,8 +14,8 @@ class ModulesServiceProvider extends ServiceProvider
     public function boot()
     {
         // For each of the registered modules, include their routes and Views
-        $modules = config("module.modules");
-        $theme = config("theme.active");
+        $modules = \Config::get("module.modules");
+        $theme = \Config::get("theme.active");
 
         while (list(, $module) = each($modules)) {
 

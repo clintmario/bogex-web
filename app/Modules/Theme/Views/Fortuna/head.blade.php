@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <link rel="icon" type="image/x-icon" href="//dev.bogex.com:8080/fortuna/images/bogex-favicon.png">
+    <link rel="icon" type="image/x-icon" href="//{{ Config::get('module.app_segment') }}/fortuna/images/bogex-favicon.png">
 
 
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
     <script type="text/javascript">
-        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/dev.bogex.com:8080\/fortuna\/js\/wp\/wp-emoji-release.min.js?ver=4.6"}};
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/{{ Config::get('module.app_segment') }}\/fortuna\/js\/wp\/wp-emoji-release.min.js?ver=4.6"}};
         !function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
     </script>
     <style type="text/css">
@@ -35,16 +35,16 @@
         }
     </style>
     <link rel='stylesheet' id='ot-google-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans:regular,600' type='text/css' media='all' />
-    <link rel='stylesheet' id='contact-form-7-css'  href='//dev.bogex.com:8080/fortuna/css/content/contact-form/styles.css?ver=4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='rs-plugin-settings-css'  href='//dev.bogex.com:8080/fortuna/css/revslider/settings.css?ver=5.2.5.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/content/contact-form/styles.css?ver=4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/revslider/settings.css?ver=5.2.5.4' type='text/css' media='all' />
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>
-    <link rel='stylesheet' id='boc-grid-css'  href='//dev.bogex.com:8080/fortuna/css/theme/stylesheets/grid.css?ver=4.6' type='text/css' media='all' />
-    <link rel='stylesheet' id='boc-icon-css'  href='//dev.bogex.com:8080/fortuna/css/theme/stylesheets/icons.css?ver=4.6' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_front-css'  href='//dev.bogex.com:8080/fortuna/css/plugins/js_composer.min.css?ver=4.12' type='text/css' media='all' />
-    <link rel='stylesheet' id='boc-main-styles-css'  href='//dev.bogex.com:8080/fortuna/css/theme/style.css?ver=4.6' type='text/css' media='all' />
-    <link rel='stylesheet' id='boc-animation-styles-css'  href='//dev.bogex.com:8080/fortuna/css/theme/stylesheets/animations.css?ver=4.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='boc-grid-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/theme/stylesheets/grid.css?ver=4.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='boc-icon-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/theme/stylesheets/icons.css?ver=4.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/plugins/js_composer.min.css?ver=4.12' type='text/css' media='all' />
+    <link rel='stylesheet' id='boc-main-styles-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/theme/style.css?ver=4.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='boc-animation-styles-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/theme/stylesheets/animations.css?ver=4.6' type='text/css' media='all' />
     <style id='boc-animation-styles-inline-css' type='text/css'>
 
         #menu > ul > li ul > li > a {
@@ -451,23 +451,23 @@
         #top_icon_box_85610.top_icon_box.type5 .icon_holder i{ color: #8224e3; }
         #top_icon_box_85610.top_icon_box.type5:hover .icon_holder i { color:  #8224e3; }
     </style>
-    <link rel='stylesheet' id='boc-responsive-style-css'  href='//dev.bogex.com:8080/fortuna/css/theme/stylesheets/grid_responsive.css?ver=4.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='boc-responsive-style-css'  href='//{{ Config::get('module.app_segment') }}/fortuna/css/theme/stylesheets/grid_responsive.css?ver=4.6' type='text/css' media='all' />
     <link rel='stylesheet' id='boc-fonts-css'  href='//fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700%2C400italic%2C700italic%7CLato%3A300%2C400%2C700%2C400italic%7CMontserrat%3A400%2C700&#038;ver=1.0.0' type='text/css' media='all' />
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/jquery/jquery.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/jquery/jquery.themepunch.tools.min.js?ver=5.2.5.4'></script>
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/jquery/jquery.themepunch.revolution.min.js?ver=5.2.5.4'></script>
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/wp/libs.min.js?ver=4.6'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/jquery/jquery.themepunch.tools.min.js?ver=5.2.5.4'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/jquery/jquery.themepunch.revolution.min.js?ver=5.2.5.4'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/wp/libs.min.js?ver=4.6'></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
-        var bocJSParams = {"boc_is_mobile_device":"","boc_theme_url":"http:\/\/dev.bogex.com:8080","header_height":"92","sticky_header":"1","submenu_arrow_effect":"1","mm_bordered_columns":"1","transparent_header":"1","fixed_footer":"1","boc_submenu_animation_effect":"sub_fade_in"};
+        var bocJSParams = {"boc_is_mobile_device":"","boc_theme_url":"http:\/\/{{ Config::get('module.app_segment') }}","header_height":"92","sticky_header":"1","submenu_arrow_effect":"1","mm_bordered_columns":"1","transparent_header":"1","fixed_footer":"1","boc_submenu_animation_effect":"sub_fade_in"};
         /* ]]> */
     </script>
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/wp/common.js?ver=4.6'></script>
-    <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/jquery/jquery.smoothscroll.js?ver=4.6'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/wp/common.js?ver=4.6'></script>
+    <script type='text/javascript' src='//{{ Config::get('module.app_segment') }}/fortuna/js/jquery/jquery.smoothscroll.js?ver=4.6'></script>
     <meta name="generator" content="WordPress 4.6" />
-    <link rel="canonical" href="http://dev.bogex.com:8080" />
-    <link rel='shortlink' href='http://dev.bogex.com:8080' />
+    <link rel="canonical" href="{{ Config::get('app.url') }}" />
+    <link rel='shortlink' href='{{ Config::get('app.url') }}' />
     <script type='text/javascript'>
         jQuery(document).ready(function($) {
             var ult_smooth_speed = 250;
@@ -476,5 +476,5 @@
         });
     </script>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
     <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
-    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="//dev.bogex.com:8080/fortuna/css/plugins/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="//dev.bogex.com:8080/fortuna/css/plugins/vc-ie8.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.2.5.4 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <!-- Retina Logo --> <script type="text/javascript"> jQuery(function($){ if (window.devicePixelRatio >= 2) { $(".logo_img > a > img").attr("src", "//dev.bogex.com:8080/images/bogex-logo.png"); } }); </script><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1435960148026{margin-bottom: 15px !important;}.vc_custom_1435960174528{margin-bottom: 15px !important;}.vc_custom_1472575644842{border-top-width: 1px !important;border-bottom-width: 1px !important;border-top-color: #eeeeee !important;border-top-style: solid !important;border-bottom-color: #eeeeee !important;border-bottom-style: solid !important;}.vc_custom_1427986969472{margin-top: 120px !important;margin-bottom: 0px !important;}.vc_custom_1428565460787{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565465763{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565470643{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565485922{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565480946{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565476090{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1426426069052{padding-top: 70px !important;padding-right: 100px !important;padding-bottom: 50px !important;padding-left: 100px !important;}.vc_custom_1454424504539{padding-top: 9% !important;padding-right: 9% !important;padding-bottom: 6% !important;padding-left: 14% !important;}.vc_custom_1472573094230{background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472575963813{padding-top: 20px !important;padding-left: 40px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="//{{ Config::get('module.app_segment') }}/fortuna/css/plugins/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="//{{ Config::get('module.app_segment') }}/fortuna/css/plugins/vc-ie8.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.2.5.4 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <!-- Retina Logo --> <script type="text/javascript"> jQuery(function($){ if (window.devicePixelRatio >= 2) { $(".logo_img > a > img").attr("src", "//{{ Config::get('module.app_segment') }}/images/bogex-logo.png"); } }); </script><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1435960148026{margin-bottom: 15px !important;}.vc_custom_1435960174528{margin-bottom: 15px !important;}.vc_custom_1472575644842{border-top-width: 1px !important;border-bottom-width: 1px !important;border-top-color: #eeeeee !important;border-top-style: solid !important;border-bottom-color: #eeeeee !important;border-bottom-style: solid !important;}.vc_custom_1427986969472{margin-top: 120px !important;margin-bottom: 0px !important;}.vc_custom_1428565460787{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565465763{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565470643{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565485922{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565480946{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1428565476090{padding-right: 30px !important;padding-left: 30px !important;}.vc_custom_1426426069052{padding-top: 70px !important;padding-right: 100px !important;padding-bottom: 50px !important;padding-left: 100px !important;}.vc_custom_1454424504539{padding-top: 9% !important;padding-right: 9% !important;padding-bottom: 6% !important;padding-left: 14% !important;}.vc_custom_1472573094230{background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472575963813{padding-top: 20px !important;padding-left: 40px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>

@@ -9,5 +9,6 @@ return [
     'modules' => [
         'Theme',
         'Home',
-    ]
+    ],
+    'app_segment' => preg_replace("/https?:\/\/(.*$)/i", "$1", config('app.url')),
 ];

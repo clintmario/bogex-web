@@ -1,3 +1,5 @@
+<div id="about" class="vc_row wpb_row vc_row-fluid" style="padding-top: 40px; margin-top: 20px; margin-bottom: 20px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="boc_spacing " style="height: 0px"></div></div></div></div>
+</div>
 <div class="vc_row wpb_row vc_row-fluid vc_custom_1472575644842 vc_row-has-fill">
     <div class="equal_height_column dark_links no_side_padding_in_responsive_column wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-12 vc_col-xs-12">
         <div class="vc_column-inner vc_custom_1454424504539">
@@ -10,7 +12,7 @@
                 </div>
                 <div class="side_icon_box large  boc_animate_when_almost_visible">
                     <span class="icon_feat " style=""><i class="icon icon-world" style=""></i></span>
-                    <h3><a href="http://google.com" target="_blank">Company</a></h3>
+                    <h3><a href="{{ Config::get('app.url') }}">Company</a></h3>
                     <div class="side_icon_box_content">
                         <ul>
                             <li>Bogex  was founded in 2006 as a Private Limited in Bangalore, India by a few graduates of Indian Institute of Technology, Guwahati.</li>
@@ -23,7 +25,7 @@
                 <div class="boc_spacing " style="height: 10px"></div>
                 <div class="side_icon_box large  boc_animate_when_almost_visible">
                     <span class="icon_feat " style=""><i class="icon icon-target3" style=""></i></span>
-                    <h3><a href="http://google.com" target="_blank">Mission</a></h3>
+                    <h3><a href="{{ Config::get('app.url') }}">Mission</a></h3>
                     <div class="side_icon_box_content">
                         To deliver cost effective and reliable solutions to our customers that meet the highest standards of quality and usability.
                     </div>
@@ -38,7 +40,7 @@
                 <div class="boc_spacing " style="height: 10px"></div>
                 <div class="side_icon_box large  boc_animate_when_almost_visible">
                     <span class="icon_feat " style=""><i class="icon icon-anchor3" style=""></i></span>
-                    <h3><a href="http://google.com" target="_blank">Core Values</a></h3>
+                    <h3><a href="{{ Config::get('app.url') }}">Core Values</a></h3>
                     <div class="side_icon_box_content">The motto is <strong>&#8220;Sincerity and Truth.&#8221;</strong><br />
                         It is taken from Psalm 51:6 which states:<br />
                         &#8216;Sincerity and Truth are what You require;&#8217;
