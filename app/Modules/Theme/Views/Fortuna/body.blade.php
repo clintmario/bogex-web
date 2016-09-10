@@ -1,7 +1,8 @@
-<body class="page page-id-23797 page-template-default wpb-js-composer js-comp-ver-4.12 vc_responsive">
 <!-- Page Wrapper::START -->
 <div id="wrapper" class="full_width_wrapper page_title_bgr responsive ">
-@include('Fortuna::header')
+@section('header')
+    @include('Fortuna::header')
+@show
     <!-- Page content::START -->
     <div class="content_body">
         <!-- Page template :: START -->
@@ -9,9 +10,9 @@
             <div class="container">
                 <div class="section">
                     <div class='post_content'>
-                        @foreach ($sections as $section)
-                            @include("Fortuna::section-" . $section)
-                        @endforeach
+                        @section('sections')
+                            @include('Fortuna::sections')
+                        @show
                     </div>
                 </div>
             </div>
@@ -19,7 +20,9 @@
         <!-- Page template :: END -->
     </div>
     <!-- Page content::END -->
-@include('Fortuna::footer')
+@section('footer')
+    @include('Fortuna::footer')
+@show
 </div>
 <!-- Page wrapper::END -->
 
@@ -51,5 +54,3 @@
 <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/wp/jquery.vhparallax.js?ver=1.5.6'></script>
 <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/wp/jquery.appear.js?ver=1.5.6'></script>
 <script type='text/javascript' src='//dev.bogex.com:8080/fortuna/js/wp/custom.js?ver=1.5.6'></script>
-
-</body>
