@@ -277,6 +277,7 @@
             #header.sticky_header {
                 position: fixed;
             }
+            #bogex-home { margin-top: 40px; }
         }
 
         @media only screen and (min-width: 1018px){
