@@ -31,6 +31,10 @@ ssh-add $HOME/$BGX_GITHUB_SSH_KEY_FILE_NAME
 ssh-keyscan github.com >> ~/.github_key
 ssh-keygen -lf ~/.github_key
 cat ~/.github_key >> ~/.ssh/known_hosts
+if [ $APP_ENV == "production" ]; then
+    git checkout master
+fi
 git pull
 composer install
+php artisan migrate --path=app/Modules/Home/Migrations
 EOF

@@ -9,25 +9,58 @@
                 </div>
                 <div role="form" class="wpcf7" id="wpcf7-f10-p23797-o1" lang="en-US" dir="ltr">
                     <div class="screen-reader-response"></div>
-                    <form action="/index.php/home-page-bogex/#wpcf7-f10-p23797-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="10" />
-                            <input type="hidden" name="_wpcf7_version" value="4.5" />
-                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10-p23797-o1" />
-                            <input type="hidden" name="_wpnonce" value="9aea46c964" />
-                        </div>
+                    <form id="bogex-contact-form" action="{{ Config::get('app.url') }}/contact" method="post" class="wpcf7-form">
                         <p><label> Your Name <span style="color:#ff8e17">*</span><br />
-                                <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </label></p>
+                                <span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </label></p>
                         <p><label> Your Email <span style="color:#ff8e17">*</span><br />
-                                <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </label></p>
+                                <span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </label></p>
                         <p><label> Subject<br />
-                                <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </label></p>
+                                <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </label></p>
                         <p><label> Your Message<br />
-                                <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
-                        <p><a href="{{ Config::get('app.url') }}#contact" class="button  btn_large btn_royalblue btn_rounded icon_pos_before" target="_self"><i class="icon  icon-paperplane2"></i><span>&nbsp;&nbsp;Send</span></a></p>
-                        <div class="wpcf7-response-output wpcf7-display-none"></div></form></div><div class="boc_spacing " style="height: 20px"></div></div></div></div><script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyBizgNcPAW_ssdOFlneiSW3nMZX33wqLBU'></script>
+                                <span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
+                        <p><a href="{{ Config::get('app.url') }}" onclick="sendMessage(); return false;" class="button  btn_large btn_royalblue btn_rounded icon_pos_before"><i class="icon  icon-paperplane2"></i><span>&nbsp;&nbsp;Send</span></a>
+                            <img id="bogex-loader" style="margin-left: 10px;" class="wpcf7-display-none" src="{{ Config::get('app.url') }}/fortuna/images/ajax-loader.gif" /><span id="bogex-contact-response" class="wpcf7-display-none" style="font-size: 12px; font-weight: bold; margin-left: 20px;"></span>
+                        </p>
+                    </form>
+                </div>
+                <div class="boc_spacing " style="height: 20px"></div></div></div></div><script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyBizgNcPAW_ssdOFlneiSW3nMZX33wqLBU'></script>
     <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="boc_spacing " style="height: 20px"></div><div id="map_9697" style="height:300px;" class="boc_google_map"></div>
+                <script type="text/javascript">
+                    var emailInProgress = 0;
+                    function sendMessage() {
+                        if (emailInProgress == 1) {
+                            return;
+                        }
+                        emailInProgress = 1;
+
+                        var contactForm = jQuery('#bogex-contact-form');
+                        jQuery('#bogex-loader').removeClass('wpcf7-display-none');
+                        jQuery('#bogex-contact-response').addClass('wpcf7-display-none');
+                        jQuery.ajax({
+                            type: contactForm.attr('method'),
+                            url: contactForm.attr('action'),
+                            data: contactForm.serialize(),
+                            success: function(data) {
+                                jQuery('#bogex-contact-response').removeClass('success');
+                                jQuery('#bogex-contact-response').removeClass('warning_msg');
+                                if (data.status == 0) {
+                                    jQuery('#bogex-contact-response').addClass('warning_msg');
+                                    jQuery('#bogex-contact-response').removeClass('wpcf7-display-none');
+                                    jQuery('#bogex-contact-response').html(data.messages[Object.keys(data.messages)[0]][0]);
+                                }
+                                else {
+                                    jQuery('#bogex-contact-response').addClass('success');
+                                    jQuery('#bogex-contact-response').removeClass('wpcf7-display-none');
+                                    jQuery('#bogex-contact-response').html('Your message has been sent. Thank you.');
+                                    jQuery('#bogex-contact-form')[0].reset();
+                                }
+
+                                emailInProgress = 0;
+                                jQuery('#bogex-loader').addClass('wpcf7-display-none');
+                            }
+                        });
+                    }
+                </script>
                 <script type="text/javascript">
                     jQuery(window).load(function() {
 
@@ -105,11 +138,5 @@
                                 alert("Geocode was not successful for the following reason: " + status);
                             }
                         });
-
-                        /*var marker = new google.maps.Marker({
-                            map: map_6307,
-
-                            position: map_6307.getCenter()
-                        });*/
                     });</script><div class="boc_spacing " style="height: 10px"></div></div></div></div>
 </div>

@@ -9,3 +9,5 @@
 Route::get('/', function () {
     return View('Fortuna::home', ['sections' => ['home', 'services', 'clients', 'portfolio', 'testimonials', 'about', 'contact']]);
 });
+
+Route::post('/contact', 'App\Modules\Home\Controllers\ContactController@store');
