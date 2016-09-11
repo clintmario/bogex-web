@@ -68,6 +68,8 @@ COPY docker/info.php /var/www/html/
 COPY docker/run-lamp.sh /usr/sbin/
 COPY ./ /var/www/html/$BGX_APP_NAME/
 
+RUN chmod +x /var/www/html/$BGX_APP_NAME/docker/*.sh
+
 RUN a2enmod rewrite
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN chmod +x /usr/sbin/run-lamp.sh
