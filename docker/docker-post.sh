@@ -18,9 +18,10 @@ Q3="GRANT ALL PRIVILEGES ON $DB_DATABASE.* TO '$DB_USERNAME'@'%';"
 Q4="FLUSH PRIVILEGES;"
 SQL="${Q1}${Q2}${Q3}${Q4}"
     
+if [ $APP_ENV != "production" ]; then
 $MYSQL -uroot -e "$SQL"
-
 echo "SQL executed." >> /tmp/docker-post.log
+fi
 
 su $BGX_USER_NAME <<'EOF'
 source $HOME/.env
