@@ -25,7 +25,7 @@ class ContactController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'subject' => 'required|max:255',
-            'message' => 'required|max:1023',
+            'message' => 'required|max:2047',
         ]);
 
         if ($validator->fails()) {

@@ -19,7 +19,7 @@
                         <p><label> Your Message<br />
                                 <span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
                         <p><a href="{{ Config::get('app.url') }}" onclick="sendMessage(); return false;" class="button  btn_large btn_royalblue btn_rounded icon_pos_before"><i class="icon  icon-paperplane2"></i><span>&nbsp;&nbsp;Send</span></a>
-                            <img id="bogex-loader" style="margin-left: 10px;" class="wpcf7-display-none" src="{{ Config::get('app.url') }}/fortuna/images/ajax-loader.gif" /><span id="bogex-contact-response" class="wpcf7-display-none" style="font-size: 12px; font-weight: bold; margin-left: 20px;"></span>
+                            <img id="bogex-loader" style="margin-left: 10px;" alt="Bogex Loader" class="wpcf7-display-none" src="{{ Config::get('app.url') }}/fortuna/images/ajax-loader.gif" /><span id="bogex-contact-response" class="wpcf7-display-none" style="font-size: 12px; font-weight: bold; margin-left: 20px;"></span>
                         </p>
                     </form>
                 </div>
