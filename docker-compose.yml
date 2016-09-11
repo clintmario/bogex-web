@@ -1,0 +1,15 @@
+app:
+  image: clintmario/ubuntu-lamp:bw2
+  ports:
+    - "8080:80"
+    - "33060:3306"
+    - "2200:22"
+  volumes:
+    - "./:/var/www/html/bogex-web/"
+  environment:
+   - LOG_STDOUT=access_log
+   - LOG_STDERR=error_log
+   - BGX_SERVER_NAME=dev.bogex.com
+   - BGX_APP_NAME=bogex-web
+  extra_hosts:
+   - "$BGX_SERVER_NAME:127.0.0.1"
