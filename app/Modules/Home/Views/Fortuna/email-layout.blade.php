@@ -56,7 +56,7 @@
                             <tr>
                                 <td height="36" width="" class="logo">
                                     <a href="{{ Config::get('app.url') }}">
-                                        <img class="logo-img" src="//{{ Config::get('module.app_segment') }}/fortuna/images/bogex-logo.png" alt="Bogex" height="36" border="0"/>
+                                        <img class="logo-img" src="{{ Config::get('app.url') }}/fortuna/images/bogex-logo.png" alt="Bogex" height="36" border="0"/>
                                     </a>
                                 </td>
                             </tr>
