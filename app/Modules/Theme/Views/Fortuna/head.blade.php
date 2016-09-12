@@ -2,9 +2,9 @@
   ================================================== -->
     <meta charset="UTF-8">
 
-    <title>Bogex &#8211; Home</title>
+    <title>Bogex - ad lucem</title>
 
-    <meta name="description" content="Just another WordPress site" />
+    <meta name="description" content="Bogex delivers cost effective and reliable solutions to our customers that meet the highest standards of quality and usability." />
 
     <!-- Mobile Specific Metas
     ================================================== -->
