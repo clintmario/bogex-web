@@ -66,7 +66,7 @@ fi
 service ssh start
 
 # Bogex post commands.
-/bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-post.sh
+/bin/bash /var/www/html/$BGX_SERVER_NAME/docker/docker-post.sh
 
 # Run Apache:
 if [ $LOG_LEVEL == 'debug' ]; then
