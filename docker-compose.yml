@@ -5,7 +5,7 @@ app:
     - "33060:3306"
     - "2200:22"
   volumes:
-    - "./:/var/www/html/bogex-web/"
+    - "./:/var/www/html/dev.bogex.com/"
   environment:
    - LOG_STDOUT=access_log
    - LOG_STDERR=error_log
