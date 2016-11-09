@@ -66,10 +66,10 @@ ENV BGX_APP_NAME bogex-web
 
 COPY docker/info.php /var/www/html/
 COPY docker/run-lamp.sh /usr/sbin/
-COPY ./ /var/www/html/$BGX_APP_NAME/
+COPY ./ /var/www/html/$BGX_SERVER_NAME/
 
-RUN chmod +x /var/www/html/$BGX_APP_NAME/docker/*.sh
-RUN mkdir -p /var/www/html/$BGX_APP_NAME/vendor
+RUN chmod +x /var/www/html/$BGX_SERVER_NAME/docker/*.sh
+RUN mkdir -p /var/www/html/$BGX_SERVER_NAME/vendor
 
 RUN a2enmod rewrite
 RUN ln -s /usr/bin/nodejs /usr/bin/node
@@ -85,6 +85,6 @@ EXPOSE 80
 EXPOSE 3306
 EXPOSE 22
 
-RUN /bin/bash /var/www/html/$BGX_APP_NAME/docker/docker-pre.sh
+RUN /bin/bash /var/www/html/$BGX_SERVER_NAME/docker/docker-pre.sh
 
 CMD ["/usr/sbin/run-lamp.sh"]
